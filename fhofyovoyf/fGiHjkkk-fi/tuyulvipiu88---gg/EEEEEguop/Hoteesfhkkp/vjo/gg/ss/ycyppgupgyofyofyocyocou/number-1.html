@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b45a8">
+    
+    <!-- برای مرورگر اپل -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!-- برای مایکروسافت -->
+    <meta name="msapplication-navbutton-color" content="#1b45a8">
+    
+    <title>تم شماره 1</title>
+    <style>
+        /* Reset و پایه */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            background: linear-gradient(to top, #1b45a8, #3363d4, #6d8bd1);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* هدر */
+        .head {
+            padding: clamp(8px, 2vw, 12px) clamp(18px, 4vw, 24px);
+            color: #ffffff;
+            background-color: #3363d4;
+            border-radius: 30px;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 2rem;
+        }
+
+        /* المنت های سفارشی */
+        star {
+            color: white; 
+            border: 2px solid #cbcdd1;
+            border-radius: 9px;
+            padding: clamp(8px, 2vw, 12px);
+            border-right: 12px solid #6d8bd1;
+            font-size: clamp(16px, 4vw, 20px);
+            text-align: right;
+            display: block;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        des {
+            color: white; 
+            font-size: clamp(12px, 3vw, 14px);
+            padding: clamp(8px, 2vw, 12px);
+            text-align: right;
+            display: block;
+            line-height: 1.5;
+        }
+
+        address-a {
+            color: #f0f0f0;
+            text-align: center;
+            font-size: clamp(10px, 2.5vw, 12px);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* کارت ها */
+        .card {
+            background: rgba(255,255,255,0.1);
+            padding: clamp(1.5rem, 4vw, 2rem);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        /* هایلایت ها */
+        .card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .card:hover star {
+            border-right-color: #cbcdd1;
+            transform: scale(1.02);
+        }
+
+        /* کانتینر اصلی */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* رسپانسیو برای موبایل */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .card {
+                padding: 1.25rem;
+                margin-bottom: 1rem;
+            }
+            
+            star {
+                padding: 10px;
+                font-size: 18px;
+            }
+            
+            des {
+                font-size: 13px;
+                padding: 8px;
+            }
+        }
+
+        /* رسپانسیو برای تبلت */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .card {
+                max-width: 500px;
+            }
+        }
+
+        /* برای صفحات خیلی کوچک */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .head {
+                padding: 6px 15px;
+                margin-bottom: 1rem;
+            }
+            
+            .card {
+                padding: 1rem;
+            }
+            
+            star {
+                font-size: 16px;
+                padding: 8px;
+                border-right: 8px solid;
+            }
+            
+            des {
+                font-size: 12px;
+                padding: 6px;
+            }
+            
+            address-a {
+                font-size: 10px;
+            }
+        }
+
+        /* برای دسکتاپ بزرگ */
+        @media (min-width: 1200px) {
+            .card {
+                max-width: 700px;
+            }
+        }
+
+        /* انیمیشن برای تعامل بهتر */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="head"> 
+            <address-a>Teheme1.com</address-a>
+            <p>تم شماره #1</p>
+        </header>
+        
+        <div class="card">
+            <star>تم زیبا!</star>
+            <des>این وبسایت با این تم خیلی خوشگله!</des>
+        </div>
+        
+        <div class="card">
+            <star>استفاده شده از المنت های سفارشی</star>
+            <des>اکثر المنت های صفحه، کاستوم هستند</des>
+        </div>
+        
+        <div class="card">
+            <star>رسپانسیو</star>
+            <des>این صفحه درتمامی دستگاه ها قابل استفاده است!</des>
+        </div>
+        
+        <div class="card">
+            <star>قابل ویرایش</star>
+            <des>میتوانید رنگ ها را تغییر دهید یا هرچیز دیگری!</des>
+        </div>
+        
+        <div class="card">
+            <star>قیمت‌مناسب</star>
+            <des>
+                این صفحه تم با قیمت ۱۰۰ هزارتومان برای صفحه بدون دامنه و ۲۰۰ هزارتومان با دامنه فروش میرود.
+            </des>
+            <des style="margin-top: 15px; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                اطلاعات بیشتر درباره این تم در تلگرام:<br>
+                @iLegisus
+            </des>
+        </div>
+    </div>
+</body>
+</html>
