@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <title>تم شماره ۷</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      z-index: 100;
+      animation: fadeDown 1.5s ease;
+    }
+
+    main {
+      padding-top: 100px;
+      text-align: center;
+    }
+
+    section {
+      padding: 80px 20px;
+      min-height: 80vh;
+      transition: all 0.8s ease;
+    }
+
+    .intro {
+      animation: fadeIn 2s ease;
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: slideIn 2s ease;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      line-height: 2;
+      opacity: 0.9;
+    }
+
+    .elements {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .element-box {
+      background: #111;
+      border: 2px solid #fff;
+      border-radius: 15px;
+      padding: 30px;
+      width: 280px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: transform 0.4s ease, background 0.4s ease;
+    }
+
+    .element-box:hover {
+      transform: scale(1.05);
+      background: #fff;
+      color: #000;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 15px 40px;
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: pulse 3s infinite;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 1rem;
+      border-top: 1px solid #333;
+      opacity: 0.7;
+    }
+
+    /* انیمیشن‌ها */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideIn {
+      from {transform: translateY(-30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes fadeDown {
+      from {transform: translateY(-50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0px #fff; }
+      50% { box-shadow: 0 0 20px #fff; }
+    }
+
+    /* رسپانسیو */
+    @media (max-width: 768px) {
+      .intro h1 { font-size: 2rem; }
+      .element-box { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>🌙 تم شماره ۷</header>
+
+  <main>
+    <section class="intro">
+      <h1>به تم شماره ۷ خوش آمدید</h1>
+      <p>
+        این تم یک طراحی مینیمال، سیاه و سفید، با افکت‌های ساده و جذابه.  
+        می‌تونی از اینجا برای ساخت وب‌سایت شخصی، پورتفولیو یا هر پروژه‌ای استفاده کنی.  
+        المنت‌های زیر قابل تغییر هستن تا هر چی بخوای بهش اضافه کنی.
+      </p>
+      <button class="btn">دکمه</button>
+    </section>
+
+    <section class="elements">
+      <div class="element-box">المنت ۱</div>
+      <div class="element-box">المنت ۲</div>
+      <div class="element-box">المنت ۳</div>
+      <div class="element-box">المنت ۴</div>
+    </section>
+  </main>
+
+  <footer>
+    ساخته شده با ❤️ توسط شما — تم شماره ۷
+  </footer>
+
+</body>
+</html>

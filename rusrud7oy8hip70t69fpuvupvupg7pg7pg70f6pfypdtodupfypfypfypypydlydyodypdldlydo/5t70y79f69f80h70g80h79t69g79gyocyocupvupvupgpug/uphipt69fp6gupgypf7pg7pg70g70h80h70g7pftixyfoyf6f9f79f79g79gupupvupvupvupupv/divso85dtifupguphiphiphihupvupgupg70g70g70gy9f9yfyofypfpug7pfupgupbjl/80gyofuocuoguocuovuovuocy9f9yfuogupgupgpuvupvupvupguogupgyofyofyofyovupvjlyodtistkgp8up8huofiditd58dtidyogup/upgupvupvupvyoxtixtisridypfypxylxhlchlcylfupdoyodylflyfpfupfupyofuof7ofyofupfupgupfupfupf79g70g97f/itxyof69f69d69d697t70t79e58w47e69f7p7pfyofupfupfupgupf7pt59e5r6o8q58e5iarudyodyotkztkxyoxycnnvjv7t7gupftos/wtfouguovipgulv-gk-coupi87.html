@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تم شماره ۴</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, #ffffff, #f0f8ff);
+            color: #000;
+            animation: fadeIn 1s;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background: #007bff;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translate(-50%, -50%) rotate(45deg);
+            animation: move 15s infinite linear;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .content:hover {
+            transform: scale(1.05);
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .button {
+            background-color: #00bfff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+        }
+
+        .button:hover {
+            background-color: #0080ff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.7);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .button {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>تم شماره ۴</h1>
+    </header>
+    <div class="content">
+        <h2>درباره تم</h2>
+        <p>
+            این تم با طراحی پیچیده و انیمیشن‌های دلفریب ایجاد شده است. 
+            ترکیب رنگ‌های آبی و آبی آسمانی، احساس تازگی و مدرنیته را به آن بخشیده است. 
+            با استفاده از انیمیشن‌های جذاب، تجربه کاربری به شیوه‌ای خلاقانه بهبود یافته است.
+        </p>
+        <a href="#" class="button">دکمه</a>
+    </div>
+</body>
+</html>
